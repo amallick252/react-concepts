@@ -19,9 +19,8 @@ function App() {
   return (
     <>
     <LoginContext.Provider value = {{userObj,userArr, setAppData}} >
-      {appData}
+      {/* {appData} */}
       
-       <GetContext style={{backgroundColor:"gray", color:'white'}}/>
        <PropPass1 name= "Abinash" age= {31} userObj={userObj} userArr={userArr}/>
        <hr/>
        <PropPass2 age1= {37} {...userObj} {...userArr} />
@@ -30,6 +29,7 @@ function App() {
        <p>Child can send data to parent, using callback Fn passed down by parent to child as a props</p>
        <hr/>
        <HOC/>
+       <GetContext style={{backgroundColor:"gray", color:'white'}}/>
        <ReactInterview/>
        </LoginContext.Provider>
     </>
