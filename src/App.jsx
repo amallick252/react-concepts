@@ -7,6 +7,7 @@ import HOC from './components/HOC'
 import LoginContext from './context/LoginContext'
 import GetContext from './context/GetContext'
 import ReactInterview from './components/ReactInterview'
+import ReduxToolKit from './components/ReduxToolKit'
 
 
 
@@ -29,7 +30,8 @@ function App() {
        <p>Child can send data to parent, using callback Fn passed down by parent to child as a props</p>
        <hr/>
        <HOC/>
-       <GetContext style={{backgroundColor:"gray", color:'white'}}/>
+       <GetContext style={{backgroundColor:"#eaeaea"}}/>
+       <ReduxToolKit/>
        <ReactInterview/>
        </LoginContext.Provider>
     </>
