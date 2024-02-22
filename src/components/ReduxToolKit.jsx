@@ -85,6 +85,43 @@ const SomeComponent = () => {
 
 export default SomeComponent;
 `
+const loginComponentString =`import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout } from './path-to-authSlice';
+
+const YourComponent = () => {
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector((state) => state.auth.status);
+  const userData = useSelector((state) => state.auth.userData);
+
+  const handleLogin = (userData) => {
+    dispatch(login(userData));
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+
+  return (
+    <div>
+      {isAuthenticated ? (
+        <div>
+          <p>Welcome, {userData.name}!</p>
+          <button onClick={handleLogout}>Logout</button>
+        </div>
+      ) : (
+        <div>
+          <p>Please log in</p>
+          {/* Your login form or button */}
+          <button onClick={() => handleLogin({ name: 'John' })}>Login</button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default YourComponent;`
+
   return (
     <div style={{ backgroundColor: "#eaeaea" }}>
       <h2>Redux Tool Kit</h2>
@@ -113,6 +150,10 @@ export default SomeComponent;
 
       <h3>Step-3(Component using ReduxStore)</h3>
       <p>Create a component(counterComponnet.jsx), inside src/component folder </p>
+
+      <h4>authSlice Component</h4>
+      <SyntaxWrap children={loginComponentString}/>
+      <h4>loginSlice Component</h4>
       <SyntaxWrap children={counterComponentString}/>
 
     </div>

@@ -13,6 +13,8 @@ const SyntaxWrap = ({children}) => {
               borderRadius: "10px",
               width: "600px",
             }}
+            wrapLines={true}
+            showLineNumbers
             >
             {children}
           </SyntaxHighlighter>

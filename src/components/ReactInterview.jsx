@@ -3,7 +3,7 @@ import React from "react";
 const ReactInterview = () => {
   return (
     <div>
-      ReactInterview
+      <h2>ReactInterview</h2>
       <h3>How to prevent componnets from rerendering?</h3>
       <p>`Ans: by using pure components. pure componets: by default components re-render when the parent rerenders, Pure components render if the props
         change|| this is used for prefomance optimization, can be achived my

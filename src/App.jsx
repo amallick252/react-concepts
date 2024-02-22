@@ -8,6 +8,7 @@ import LoginContext from './context/LoginContext'
 import GetContext from './context/GetContext'
 import ReactInterview from './components/ReactInterview'
 import ReduxToolKit from './components/ReduxToolKit'
+import ReactRouterDom from './components/ReactRouterDom'
 
 
 
@@ -21,7 +22,6 @@ function App() {
     <>
     <LoginContext.Provider value = {{userObj,userArr, setAppData}} >
       {/* {appData} */}
-      
        <PropPass1 name= "Abinash" age= {31} userObj={userObj} userArr={userArr}/>
        <hr/>
        <PropPass2 age1= {37} {...userObj} {...userArr} />
@@ -32,6 +32,7 @@ function App() {
        <HOC/>
        <GetContext style={{backgroundColor:"#eaeaea"}}/>
        <ReduxToolKit/>
+       <ReactRouterDom/>
        <ReactInterview/>
        </LoginContext.Provider>
     </>
