@@ -9,6 +9,8 @@ import GetContext from './context/GetContext'
 import ReactInterview from './components/ReactInterview'
 import ReduxToolKit from './components/ReduxToolKit'
 import ReactRouterDom from './components/ReactRouterDom'
+import TodoAppRTK from './components/TodoAppRTK'
+import TodoAppContextAPI from './components/TodoAppContextAPI'
 
 
 
@@ -32,6 +34,8 @@ function App() {
        <HOC/>
        <GetContext style={{backgroundColor:"#eaeaea"}}/>
        <ReduxToolKit/>
+      <TodoAppContextAPI/>
+      <TodoAppRTK/>
        <ReactRouterDom/>
        <ReactInterview/>
        </LoginContext.Provider>
