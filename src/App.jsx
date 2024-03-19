@@ -11,6 +11,7 @@ import ReduxToolKit from './components/ReduxToolKit'
 import ReactRouterDom from './components/ReactRouterDom'
 import TodoAppRTK from './components/TodoAppRTK'
 import TodoAppContextAPI from './components/TodoAppContextAPI'
+import Axios from './components/Axios'
 
 
 
@@ -36,6 +37,7 @@ function App() {
        <ReduxToolKit/>
       <TodoAppContextAPI/>
       <TodoAppRTK/>
+      <Axios/>
        <ReactRouterDom/>
        <ReactInterview/>
        </LoginContext.Provider>
